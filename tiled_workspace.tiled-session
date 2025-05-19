@@ -1,0 +1,49 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "assets/maps/test_map.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "assets/maps",
+        "assets"
+    ],
+    "fileStates": {
+        "assets/maps/terrain_extruded.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 3
+        },
+        "assets/maps/test_map.tmx": {
+            "scale": 5.29625,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 80.05664385178193,
+                "y": 80.05664385178193
+            }
+        }
+    },
+    "last.imagePath": "C:/Projects/GameDev/LibgdxExperimentation/assets/graphics",
+    "map.height": 10,
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": "3",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 10,
+    "openFiles": [
+        "assets/maps/test_map.tmx",
+        "assets/maps/terrain_extruded.tsx"
+    ],
+    "project": "tiled_workspace.tiled-project",
+    "recentFiles": [
+        "assets/maps/terrain_extruded.tsx",
+        "assets/maps/test_map.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.margin": 4,
+    "tileset.spacing": 8,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

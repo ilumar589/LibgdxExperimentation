@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" source="terrain_extruded.tsx"/>
+ <layer id="1" name="ground" width="10" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhZgB2IOYCYEwsbmS8LxHJYaHksbHwYlx50/TA+AARTA8o=
+  </data>
+ </layer>
+ <layer id="2" name="decoration" width="10" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFxAIFIFakgX5kcQAlmADE
+  </data>
+ </layer>
+ <objectgroup id="3" name="objects"/>
+ <layer id="4" name="foreground" width="10" height="10">
+  <data encoding="base64" compression="zlib">
+   eJzbyMDAsIkA3gzEx4H4BAF8kgR1d4H4HgF8n2HkAQDqmh9B
+  </data>
+ </layer>
+</map>
