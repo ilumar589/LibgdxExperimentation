@@ -3,12 +3,12 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 buildscript {
   repositories {
     mavenCentral()
-    maven { url 'https://s01.oss.sonatype.org' }
+    maven { url = uri('https://s01.oss.sonatype.org') }
     gradlePluginPortal()
     mavenLocal()
     google()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-    maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
+    maven { url = uri('https://oss.sonatype.org/content/repositories/snapshots/') }
+    maven { url = uri('https://s01.oss.sonatype.org/content/repositories/snapshots/') }
   }
   dependencies {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
@@ -23,8 +23,8 @@ allprojects {
   // This allows you to "Build and run using IntelliJ IDEA", an option in IDEA's Settings.
   idea {
     module {
-      outputDir file('build/classes/java/main')
-      testOutputDir file('build/classes/java/test')
+      outputDir = file('build/classes/java/main')
+      testOutputDir = file('build/classes/java/test')
     }
   }
 }
@@ -32,7 +32,12 @@ allprojects {
 configure(subprojects) {
   apply plugin: 'java-library'
   apply plugin: 'kotlin'
-  sourceCompatibility = 23
+
+  java {
+    toolchain {
+      languageVersion = JavaLanguageVersion.of(24)
+    }
+  }
 
   // From https://lyze.dev/2021/04/29/libGDX-Internal-Assets-List/
   // The article can be helpful when using assets.txt in your project.
@@ -58,8 +63,8 @@ configure(subprojects) {
     options.incremental = true
   }
 
-  compileKotlin.compilerOptions.jvmTarget.set(JvmTarget.JVM_23)
-  compileTestKotlin.compilerOptions.jvmTarget.set(JvmTarget.JVM_23)
+  compileKotlin.compilerOptions.jvmTarget.set(JvmTarget.JVM_24)
+  compileTestKotlin.compilerOptions.jvmTarget.set(JvmTarget.JVM_24)
 
 }
 
@@ -68,12 +73,12 @@ subprojects {
   ext.appName = 'LibgdxExperimentation'
   repositories {
     mavenCentral()
-    maven { url 'https://s01.oss.sonatype.org' }
+    maven { url = uri('https://s01.oss.sonatype.org') }
     // You may want to remove the following line if you have errors downloading dependencies.
     mavenLocal()
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-    maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots/' }
-    maven { url 'https://jitpack.io' }
+    maven { url = uri('https://oss.sonatype.org/content/repositories/snapshots/') }
+    maven { url = uri('https://s01.oss.sonatype.org/content/repositories/snapshots/') }
+    maven { url = uri('https://jitpack.io') }
   }
 }
 

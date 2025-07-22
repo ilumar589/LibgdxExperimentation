@@ -35,6 +35,8 @@ dependencies {
   api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion"
   api "org.mini2Dx:universal-tween-engine:$universalTweenVersion"
   api "space.earlygrey:shapedrawer:$shapeDrawerVersion"
+  api "io.github.libktx:ktx-box2d:$ktxVersion"
+
 
   if (enableGraalNative == 'true') {
     implementation "io.github.berstanio:gdx-svmhelper-annotations:$graalHelperVersion"

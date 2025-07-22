@@ -33,3 +33,18 @@ Useful Gradle tasks and flags:
 Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should
 be replaced with the ID of a specific project.
 For example, `core:clean` removes `build` folder only from the `core` project.
+
+## Java Toolchain
+
+This project requires Java 24, specifically GraalVM JDK 24. If you encounter an error like:
+```
+Cannot find a Java installation on your machine matching: {languageVersion=24, vendor=any vendor, implementation=vendor-specific, nativeImageCapable=false}. Toolchain auto-provisioning is not enabled.
+```
+
+You can resolve it by:
+1. Ensuring you have GraalVM JDK 24 installed and in your PATH
+2. Enabling toolchain auto-provisioning in `gradle.properties` by setting:
+   ```
+   org.gradle.java.installations.auto-download=true
+   ```
+   This allows Gradle to automatically download the required Java toolchain if it can't find a matching one on your system.
