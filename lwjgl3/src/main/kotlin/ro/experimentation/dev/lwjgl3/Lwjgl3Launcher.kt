@@ -9,11 +9,10 @@ import ro.experimentation.dev.LibgdxExperiments
 /** Launches the desktop (LWJGL3) application. */
 fun main() {
     // This handles macOS support and helps on Windows.
-    if (StartupHelper.startNewJvmIfRequired())
-        return
+    if (StartupHelper.startNewJvmIfRequired()) return
     Lwjgl3Application(LibgdxExperiments(), Lwjgl3ApplicationConfiguration().apply {
         setTitle("LibgdxExperimentation")
-        //// Vsync limits the frames per second to what your hardware can display, and helps eliminate
+        //// Vsync limits the frames per second to what your hardware can display and helps eliminate
         //// screen tearing. This setting doesn't always work on Linux, so the line after is a safeguard.
         useVsync(true)
         //// Limits FPS to the refresh rate of the currently active monitor, plus 1 to try to match fractional
@@ -24,8 +23,8 @@ fun main() {
         //// You may also need to configure GPU drivers to fully disable Vsync; this can cause screen tearing.
 
         setWindowedMode(640, 480)
-        //// You can change these files; they are in lwjgl3/src/main/resources/ .
-        //// They can also be loaded from the root of assets/ .
+        //// You can change these files; they are in lwjgl3/src/main/resources/.
+        //// They can also be loaded from the root of assets/.
         setWindowIcon(*(arrayOf(128, 64, 32, 16).map { "libgdx$it.png" }.toTypedArray()))
     })
 }
